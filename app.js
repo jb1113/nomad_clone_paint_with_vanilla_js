@@ -1,6 +1,8 @@
 const canvas = document.getElementById("jsCanvas");
-const context = canvas.getContext("2d");
+canvas.width = 700;
+canvas.height = 700;
 
+const context = canvas.getContext("2d");
 context.strokeStyle = "#2c2c2c";
 context.lineWidth = 2.5;
 
