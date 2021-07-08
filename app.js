@@ -1,5 +1,6 @@
 const canvas = document.getElementById("jsCanvas");
 const colors = document.getElementsByClassName("jsColor");
+const range = document.getElementById("jsRange");
 
 canvas.width = 700;
 canvas.height = 700;
@@ -47,5 +48,6 @@ if (canvas) {
 	canvas.addEventListener("mouseleave", stopPainting);
 }
 
-Array.from(colors).forEach(color => color.addEventListener("click", changeColor));
-
+if (colors) {
+	Array.from(colors).forEach(color => color.addEventListener("click", changeColor));
+}
