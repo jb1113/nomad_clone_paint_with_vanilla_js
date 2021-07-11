@@ -50,6 +50,10 @@ function fillCanvas() {
 	}
 }
 
+function mouseRightClick(event) {
+	event.preventDefault();
+}
+
 function changeColor(event) {
 	console.log(event.target.style);
 	const color = event.target.style.backgroundColor;
@@ -81,6 +85,7 @@ if (canvas) {
 	canvas.addEventListener("mouseup", stopPainting);
 	canvas.addEventListener("mouseleave", stopPainting);
 	canvas.addEventListener("click", fillCanvas);
+	canvas.addEventListener("contextmenu", mouseRightClick);
 }
 
 if (colors) {
