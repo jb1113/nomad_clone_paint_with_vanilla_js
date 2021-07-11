@@ -9,6 +9,11 @@ canvas.height = 700;
 const INITIAL_COLOR = "#2c2c2c";
 
 const context = canvas.getContext("2d");
+
+// Initialize the canvas background to white
+context.fillStyle = "white";
+context.fillRect(0, 0, canvas.width, canvas.height);
+
 context.strokeStyle = "INITIAL_COLOR";
 context.lineWidth = 2.5;
 context.fillStyle = "INITIAL_COLOR";
