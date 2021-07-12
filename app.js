@@ -2,6 +2,7 @@ const canvas = document.getElementById("jsCanvas");
 const colors = document.getElementsByClassName("jsColor");
 const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
+const save = document.getElementById("jsSave");
 
 canvas.width = 700;
 canvas.height = 700;
@@ -79,6 +80,15 @@ function changeMode() {
 
 }
 
+function saveImage() {
+	const image = canvas.toDataURL();
+	const link = document.createElement("a");
+
+	link.href = image;
+	link.download = "myPainting.png";
+	link.click();
+}
+
 if (canvas) {
 	canvas.addEventListener("mousemove", onMouseMove);
 	canvas.addEventListener("mousedown", startPainting);
@@ -98,4 +108,8 @@ if (range) {
 
 if (mode) {
 	mode.addEventListener("click", changeMode);
+}
+
+if (save) {
+	save.addEventListener("click", saveImage);
 }
